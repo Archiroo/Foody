@@ -7,6 +7,10 @@
     include('banner.php');
     // Banner end
 
+    // Banner start
+    include('about.php');
+    // Banner end
+
     // About start
     include('../home/feature.php');
     // About end
