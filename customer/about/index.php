@@ -22,7 +22,4 @@
     // Footer start
     include('footer.php');
     // Footer end
-
-
-
 ?>
