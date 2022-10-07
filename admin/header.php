@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
+    <!-- <link rel="stylesheet" href="../customer/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/update.css">
@@ -20,7 +20,7 @@
 <body>
     <input type="checkbox" id="sidebar-toggle">
     <div class="sidebar">
-        <div class="sidebar-header">
+        <div class="header-sidebar">
             <h3 class="brand">
             <span class="fa-solid fa-seedling"></span>
                 <span>Foody</span>
@@ -47,6 +47,13 @@
                     <a href="#">
                         <span class="fa-solid fa-spa"></span>
                         <span>Sản phẩm</span>
+                        <!-- Thêm 2 thẻ con: Loại sản phẩm, Sản phẩm -->
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="fa-solid fa-spa"></span>
+                        <span>Loại sản phẩm</span>
                         <!-- Thêm 2 thẻ con: Loại sản phẩm, Sản phẩm -->
                     </a>
                 </li>

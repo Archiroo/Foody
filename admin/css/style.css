@@ -95,19 +95,19 @@ html{
     overflow-y: auto;
     transition: width 500ms;
 }
-.sidebar-header{
+.header-sidebar{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
 }
-.sidebar .sidebar-header .brand span{
+.sidebar .header-sidebar .brand span{
     font-size: 2rem;
 }
-.sidebar .sidebar-header label{
+.sidebar .header-sidebar label{
     font-size: 2rem;
 }
-.sidebar .sidebar-header label:hover{
+.sidebar .header-sidebar label:hover{
     cursor: pointer;
 }
 .sidebar a{
@@ -137,12 +137,12 @@ html{
     width: 6rem;
 }
 
-#sidebar-toggle:checked ~ .sidebar .sidebar-header h3 span,
+#sidebar-toggle:checked ~ .sidebar .header-sidebar h3 span,
 #sidebar-toggle:checked ~ .sidebar li span:last-child {
     display: none;
 }
 
-#sidebar-toggle:checked ~ .sidebar .sidebar-header,
+#sidebar-toggle:checked ~ .sidebar .header-sidebar,
 #sidebar-toggle:checked ~ .sidebar li {
     display: flex;
     justify-content: center;
@@ -437,12 +437,12 @@ select{
         z-index: 150;
     }
 
-    .sidebar .sidebar-header h3 span,
+    .sidebar .header-sidebar h3 span,
     .sidebar li span:last-child {
         display: none;
     }
 
-    .sidebar .sidebar-header,
+    .sidebar .header-sidebar,
     .sidebar li {
         display: flex;
         justify-content: center;
@@ -461,12 +461,12 @@ select{
         width: 240px;
     }
 
-    #sidebar-toggle:checked ~ .sidebar .sidebar-header h3 span,
+    #sidebar-toggle:checked ~ .sidebar .header-sidebar h3 span,
     #sidebar-toggle:checked ~ .sidebar li span:last-child {
         display: inline;
     }
 
-    #sidebar-toggle:checked ~ .sidebar .sidebar-header {
+    #sidebar-toggle:checked ~ .sidebar .header-sidebar {
         display: flex;
         justify-content: space-between;
     }
