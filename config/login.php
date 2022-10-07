@@ -14,15 +14,15 @@
     <div class="wrapper">
         <section class="form login">
             <header>ĐĂNG NHẬP</header>
-            <form action="#" autocomplete="off">
+            <form action="#" autocomplete="off", method="POST">
                 <div class="error-txt"></div>
                 <div class="field input">
                     <label>Tài khoản</label>
-                    <input type="text" name="email" placeholder="Email hoặc số điện thoại" required>
+                    <input type="email" name="username" placeholder="Email hoặc số điện thoại" required>
                 </div>
                 <div class="field input">
                     <label>Mật khẩu</label>
-                    <input type="password" class="password" name="password" placeholder="*****" required>
+                    <input type="password" name="password" placeholder="*****" required>
                     <i class="fas fa-eye"></i>
                 </div>
                 <div class="checkbox">
@@ -37,7 +37,58 @@
         </section>
     </div>
 
-    <script src="js/script.js"></script>
-</body> 
+    <script>
+        // Show password
+        const passWord = document.querySelector(".form input[type='password']"),
+            showpassBtn = document.querySelector(".form .field i");
+
+        showpassBtn.onclick = () => {
+            if (passWord.type == "password") {
+                passWord.type = "text";
+                showpassBtn.classList.add("active")
+            } else {
+                passWord.type = "password";
+                showpassBtn.classList.remove("active")
+            }
+        }
+
+        // Log error
+        const form = document.querySelector(".login form"),
+            loginBtn = form.querySelector(".button input"),
+            errorText = form.querySelector(".error-txt");
+        form.onsubmit = (e) => {
+            e.preventDefault(); // đếm số lần bấm
+        }
+
+        loginBtn.onclick = () => {
+            // Ajax
+            let xhr = new XMLHttpRequest(); // create XML Object
+            xhr.open("POST", "processLogin.php", true);
+            xhr.onload = () => {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        let data = xhr.response;
+                        console.log(xhr);
+                        if (data == "admin") {
+                            location.href = "../admin/index.php";
+                        }
+                        if (data == "staff") {
+                            location.href = "../staff/index.php";
+                        }
+                        if (data == "customer") {
+                            location.href = "../customer/index.php";
+                        }
+                        else {
+                            errorText.textContent = data;
+                            errorText.style.display = "block";
+                        }
+                    }
+                }
+            }
+            let formData = new FormData(form);
+            xhr.send(formData);
+        }
+    </script>
+</body>
 
 </html>

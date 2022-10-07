@@ -1,0 +1,15 @@
+tbl_user:
+	level:	1: Admin
+		2: Staff
+		3: Customer
+	status:	1: Đã kích hoạt
+		2: Chưa kích hoạt
+tbl_product:
+	status: 1: Đang bán
+		2: Ngưng bán
+tbl_bill:
+	status: 1: Khách hàng yêu cầu đặt
+		2: Quản lý/Nhân viên đã xử lý
+		3: Đang giao hàng
+		4: Giao hàng thành công (Khi khách hàng ấn đã nhận được hàng)
+		
