@@ -17,11 +17,11 @@
             <form action="#" autocomplete="off", method="POST">
                 <div class="error-txt"></div>
                 <div class="field input">
-                    <label>Tài khoản</label>
-                    <input type="email" name="username" placeholder="Email hoặc số điện thoại" required>
+                    <label>Tài khoản <span style="color: red">*</span></label>
+                    <input type="email" name="username" placeholder="Địa chỉ email" required>
                 </div>
                 <div class="field input">
-                    <label>Mật khẩu</label>
+                    <label>Mật khẩu <span style="color: red">*</span></label>
                     <input type="password" name="password" placeholder="*****" required>
                     <i class="fas fa-eye"></i>
                 </div>
@@ -61,8 +61,7 @@
         }
 
         loginBtn.onclick = () => {
-            // Ajax
-            let xhr = new XMLHttpRequest(); // create XML Object
+            let xhr = new XMLHttpRequest();
             xhr.open("POST", "processLogin.php", true);
             xhr.onload = () => {
                 if (xhr.readyState === XMLHttpRequest.DONE) {

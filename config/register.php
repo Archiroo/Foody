@@ -16,31 +16,17 @@
             <header>ĐĂNG KÝ</header>
             <form action="">
                 <div class="error-txt"></div>
-                <div class="name-details">
-                    <div class="field input">
-                        <label>Họ & tên đệm</label>
-                        <input type="text" name="fname" placeholder="Họ & tên đệm" required>
-                    </div>
-                    <div class="field input">
-                        <label>Tên</label>
-                        <input type="text" name="lname" placeholder="Nhập Tên" required>
-                    </div>
+                <div class="field input">
+                    <label>Địa chỉ email <span style="color: red">*</span></label>
+                    <input type="text" name="username" placeholder="Nhập email" required>
                 </div>
                 <div class="field input">
-                    <label>Địa chỉ email</label>
-                    <input type="text" name="email" placeholder="Nhập email" required>
-                </div>
-                <div class="field input">
-                    <label>Số điện thoại</label>
-                    <input type="text" name="phone" placeholder="Nhập số điện thoại" required>
-                </div>
-                <div class="field input">
-                    <label>Mật khẩu</label>
+                    <label>Mật khẩu <span style="color: red">*</span></label>
                     <input type="password" name="password" placeholder="Nhập mật khẩu" required>
                     <i class="fas fa-eye"></i>
                 </div>
                 <div class="field input">
-                    <label>Xác minh mật khẩu</label>
+                    <label>Xác nhận mật khẩu <span style="color: red">*</span></label>
                     <input type="password" name="confirmPass" placeholder="Nhập mật khẩu" required>
                     <i class="fas fa-eye confirmPass"></i>
                 </div>
@@ -51,7 +37,60 @@
             <div class="link">Bạn đã có tài khoản? <a href="login.php">Đăng nhập</a></div>
         </section>
     </div>
-    <script src="js/script.js"></script>
+    <script>
+        // Show password
+        const passWord = document.querySelector(".form input[name='password']"),
+              showpassBtn = document.querySelector(".form .field i"),
+              confirmPass = document.querySelector(".form input[name='confirmPass']"),
+              showConfirmBtn = document.querySelector(".confirmPass");
+              showpassBtn.onclick = () => {
+            if (passWord.type == "password") {
+                passWord.type = "text";
+                showpassBtn.classList.add("active")
+            } else {
+                passWord.type = "password";
+                showpassBtn.classList.remove("active")
+            }
+        }
+        showConfirmBtn.onclick = () => {
+            if (confirmPass.type == "password") {
+                confirmPass.type = "text";
+                showConfirmBtn.classList.add("active")
+            } else {
+                confirmPass.type = "password";
+                showConfirmBtn.classList.remove("active")
+            }
+        }
+
+        // Log error
+        const form = document.querySelector(".signup form"),
+              registerBtn = form.querySelector(".button input"),
+              errorText = form.querySelector(".error-txt");
+
+        form.onsubmit = (e) => {
+            e.preventDefault(); // đếm số lần bấm
+        }
+
+        registerBtn.onclick = () => {
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", "processRegister.php", true);
+            xhr.onload = () => {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        let data = xhr.response;
+                        if (data == "Đăng ký thành công!") {
+                            // location.href = "login.php";
+                        } else {
+                            errorText.textContent = data;
+                            errorText.style.display = "block";
+                        }
+                    }
+                }
+            }
+            let formData = new FormData(form); // create new formData object
+            xhr.send(formData);
+        }
+    </script>
 </body>
 
 </html>
