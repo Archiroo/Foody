@@ -5,10 +5,10 @@
     define('DB_PASSWORD', '');
     define('DB_NAME', 'db_foody');
 
-    $conn = mysqli_connect(LOCALHOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
-    if($conn)
+    $connect = mysqli_connect(LOCALHOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
+    if($connect)
     {
-        mysqli_query($conn, "SET NAMES 'UTF8'");
+        mysqli_query($connect, "SET NAMES 'UTF8'");
     }
     else
     {
