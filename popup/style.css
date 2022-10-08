@@ -13,7 +13,7 @@ body {
     font-family: sans-serif;
     background: rgb(144, 196, 67);
 }
-.open_model {
+.open_modal {
     padding: 10px 40px;
     border: none;
     outline: none;
@@ -25,44 +25,43 @@ body {
     font-size: 25px;
 }
 
-.model {
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     top: 0;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-.model_inner{
+.modal_inner{
     width: 400px;
     position: relative;
-    top: 30%;
+    top: 0;
     margin: auto;
     background: #fff;
     border-radius: 8px;
     overflow: hidden;
     animation: showmodal 0.2s linear;
 }
-.model_header {
+.modal_header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background: var(--pink-color);
     color: white;
 }
-.model_body{
-    padding: 15px;
+.modal_header i {
+    color: #999;
+    font-size: 16px;
 }
-.model_body h2 {
-    color: #e26e70;
-    margin-top: 10px;
-}
-.model_footer {
+.modal_footer {
     padding: 15px;
     text-align: right;
 }
-.model_footer button{
+.modal_footer button{
     padding: 10px 20px;
     color: #fff;
     background-color: #e26e70;
@@ -73,13 +72,130 @@ body {
 .hide {
     display: none;
 }
+/* CSS FORM */
+.container{
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 15px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    animation: showmodal 0.2s linear;
+}
+.container header{
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+.container header::before{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    height: 3px;
+    width: 30px;
+    left: 0;
+    border-radius: 8px;
+    background-color: #4070f4;
+}
+.container form {
+    position: relative;
+    margin-top: 16px;
+    min-height: 490px;
+    background-color: #fff;
+}
+.container form .details {
+    margin-top: 30px;
+}
+.container form .title{
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 6px 0;
+    color: #333;
+    margin-bottom: 8px;
+}
+.container form .fields {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+form .fields .input-field{
+    display: flex;
+    width: calc(100% / 3 - 15px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+.input-field label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+.input-field input{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    font-size: 0 15px;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+.input-field input:is(:focus, :valid) {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+.input-field input[type="date"] {
+    color: #707070;
+}
+.input-field input[type="date"]:valid {
+    color: #333;
+}
+
+.container form button, .nextBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    margin: 25px 0;
+    background-color: #4070f4;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+form button:hover{
+    background-color: #265df2;
+}
+form button i{
+    margin: 0 6px;
+}
+form .buttons {
+    display: flex;
+    align-items: center;
+}
+form .buttons button{
+    margin-right: 14px;
+}
+
+
+
+
 @keyframes showmodal{
     from {
         top: -200px;
         opacity: 0;
     }
     to {
-        top: 30%;
+        top: 0;
         opacity: 1;
     }
 }

@@ -5,23 +5,112 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="style.css">
     <title>Show popup</title>
 </head>
 <body>
-    <button class="open_model">Open model</button>
-    <div class="model hide">
-        <div class="model_inner">
+    <button class="open_modal">Open model</button>
+    <div class="modal hide">
+        <!-- <div class="model_inner">
             <div class="model_header">
                 <p>Thêm mới</p>
                 <i class="fas fa-times"></i>
             </div>
             <div class="model_body">
-                
             </div>
             <div class="model_footer">
                 <button>Close</button>
             </div>
+        </div> -->
+        <div class="container">
+            <div class="modal_header">
+                <header>Model Thêm</header>
+                <i class="fas fa-times"></i>
+            </div>
+            <form action="#">
+                <div class="form first">
+                    <div class="details personal">
+                        <span class="title">Personal Details</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Full name</label>
+                                <input type="text" placeholder="Enter your name" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Date of birth</label>
+                                <input type="date" placeholder="Enter birth date" required>
+                            </div>
+                            
+                            <div class="input-field">
+                                <label>Email</label>
+                                <input type="email" placeholder="Enter your email" required>
+                            </div>
+                            
+                            <div class="input-field">
+                                <label>Full name</label>
+                                <input type="text" placeholder="Enter your name" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Date of birth</label>
+                                <input type="date" placeholder="Enter birth date" required>
+                            </div>
+                            
+                            <div class="input-field">
+                                <label>Email</label>
+                                <input type="email" placeholder="Enter your email" required>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="details personal">
+                        <span class="title">Personal Details</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Full name</label>
+                                <input type="text" placeholder="Enter your name" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Date of birth</label>
+                                <input type="date" placeholder="Enter birth date" required>
+                            </div>
+                            
+                            <div class="input-field">
+                                <label>Email</label>
+                                <input type="email" placeholder="Enter your email" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Full name</label>
+                                <input type="text" placeholder="Enter your name" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Date of birth</label>
+                                <input type="date" placeholder="Enter birth date" required>
+                            </div>
+                            
+                            <div class="input-field">
+                                <label>Email</label>
+                                <input type="email" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <button class="nextBtn">
+                                <span class="btnNext">Next</span>
+                                <i class="uil uil-navigator"></i>
+                            </button>
+                            <button class="nextBtn">
+                                <span class="btnNext">Next</span>
+                                <i class="uil uil-navigator"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
     <script src="script.js"></script>
