@@ -51,7 +51,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="typeProduct.php">
                         <span class="fa-solid fa-spa"></span>
                         <span>Loại sản phẩm</span>
                         <!-- Thêm 2 thẻ con: Loại sản phẩm, Sản phẩm -->
@@ -90,7 +90,7 @@
                     <?php
                         $id_admin = $_SESSION['id_admin'];
                         $sql = "SELECT * FROM tbl_user WHERE id = '$id_admin'";
-                        $result = mysqli_query($conn,$sql);
+                        $result = mysqli_query($connect,$sql);
                         if($result == TRUE){
                             $count = mysqli_num_rows($result);
                             if($count>0){

@@ -4,6 +4,9 @@ tbl_user:
 		3: Customer
 	status:	1: Đã kích hoạt
 		2: Chưa kích hoạt
+tbl_type_product:
+	status: 1: Đang bán
+		2: Ngưng bán
 tbl_product:
 	status: 1: Đang bán
 		2: Ngưng bán
