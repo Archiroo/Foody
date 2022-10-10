@@ -3,6 +3,108 @@ include('header.php');
 ?>
 <main>
     <a href="#" class="btn btn-add"><i class="fa-solid fa-house-circle-check"></i> Thêm mới loại sản phẩm</a>
+    <div class="modal hide">
+        <!-- <div class="model_inner">
+            <div class="model_header">
+                <p>Thêm mới</p>
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="model_body">
+            </div>
+            <div class="model_footer">
+                <button>Close</button>
+            </div>
+        </div> -->
+        <div class="container">
+            <div class="modal_header">
+                <h2>Model Thêm</h2>
+                <i class="fas fa-times"></i>
+            </div>
+            <form action="#">
+                <div class="form first">
+                    <div class="details personal">
+                        <span class="title">Personal Details</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Full name</label>
+                                <input type="text" placeholder="Enter your name" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Date of birth</label>
+                                <input type="date" placeholder="Enter birth date" required>
+                            </div>
+                            
+                            <div class="input-field">
+                                <label>Email</label>
+                                <input type="email" placeholder="Enter your email" required>
+                            </div>
+                            
+                            <div class="input-field">
+                                <label>Full name</label>
+                                <input type="text" placeholder="Enter your name" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Date of birth</label>
+                                <input type="date" placeholder="Enter birth date" required>
+                            </div>
+                            
+                            <div class="input-field">
+                                <label>Email</label>
+                                <input type="email" placeholder="Enter your email" required>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="details personal">
+                        <span class="title">Personal Details</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Full name</label>
+                                <input type="text" placeholder="Enter your name" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Date of birth</label>
+                                <input type="date" placeholder="Enter birth date" required>
+                            </div>
+                            
+                            <div class="input-field">
+                                <label>Email</label>
+                                <input type="email" placeholder="Enter your email" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Full name</label>
+                                <input type="text" placeholder="Enter your name" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Date of birth</label>
+                                <input type="date" placeholder="Enter birth date" required>
+                            </div>
+                            
+                            <div class="input-field">
+                                <label>Email</label>
+                                <input type="email" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <button class="nextBtn">
+                                <span class="btnNext">Next</span>
+                                <i class="uil uil-navigator"></i>
+                            </button>
+                            <button class="nextBtn">
+                                <span class="btnNext">Next</span>
+                                <i class="uil uil-navigator"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
     <section class="recent">
         <div class="activity-grid">
             <div class="activity-card">
