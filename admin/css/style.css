@@ -123,11 +123,12 @@ html{
 .sidebar .sidebar-menu ul li{
     padding: 1.5rem 2.5rem;
 }
-.sidebar .sidebar-menu ul li:hover{
+.sidebar .sidebar-menu ul li:hover, .sidebar .sidebar-menu ul li:target, .sidebar .sidebar-menu ul li:focus{
     background-color: var(--main-color-hover);
     color: #fff;
     cursor: pointer;
 }
+
 .sidebar .sidebar-menu ul li a span:first-child{
     font-size: 2rem;
 }
