@@ -169,7 +169,7 @@ header{
     left: 24rem; /*độ rộng của menu*/
     z-index: 100;
     width: calc(100% - 24rem);
-    background: #fff;
+    background: #f1f5f9;
     padding: 0rem 2rem;
     height: 6rem; /*chiều cao item là 6rem*/
     display: flex;

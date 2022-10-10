@@ -1,4 +1,4 @@
-var openModal = document.querySelector('.open_modal');
+var openModal = document.querySelector('.btn-add');
 var modal = document.querySelector('.modal');
 var iconClose = document.querySelector('.modal_header i');
 // var closeModal = document.querySelector('.model_footer button');
