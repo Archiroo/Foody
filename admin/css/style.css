@@ -20,7 +20,7 @@
     --text: #555;
     --success: #DEF7EC;
     --processing: #F0F6B2;
-    --btn-add: #30909b;
+    --btn-add: #5da148;
 }
 *{
     font-family: 'Poppins', sans-serif;
@@ -430,6 +430,143 @@ select{
 .center{
     text-align: center;
 }
+
+.modal_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal_header h2{
+    font-size: 2.5rem;
+}
+.modal_header i {
+    color: #999;
+    font-size: 2rem;
+}
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.container{
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 15px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    animation: showmodal 0.2s linear;
+}
+.hide {
+    display: none;
+}
+.container form {
+    position: relative;
+    margin-top: 16px;
+    min-height: 490px;
+    background-color: #fff;
+}
+.container form .details {
+    margin-top: 30px;
+}
+.container form .title{
+    display: block;
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin: 6px 0;
+    color: #333;
+    margin-bottom: 8px;
+}
+.container form .fields {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+form .fields .input-field{
+    display: flex;
+    width: calc(100% / 3 - 15px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+.input-field label {
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+.input-field input{
+    outline: none;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+.input-field input:is(:focus, :valid) {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+.input-field input[type="date"] {
+    color: #707070;
+}
+.input-field input[type="date"]:valid {
+    color: #333;
+}
+
+.container form button, .nextBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1.7rem;
+    border-radius: 5px;
+    margin: 25px 0;
+    background-color: #4070f4;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+form button:hover{
+    background-color: #265df2;
+}
+form button i{
+    margin: 0 6px;
+}
+form .buttons {
+    display: flex;
+    align-items: center;
+}
+form .buttons button{
+    margin-right: 14px;
+}
+
+
+
+
+@keyframes showmodal{
+    from {
+        top: -200px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
 
 /* RESPONVSIVE */
 @media only screen and (max-width: 1200px) {

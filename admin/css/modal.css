@@ -3,7 +3,7 @@ body {
     overflow: hidden;
     font-family: sans-serif;
 }
-.modal_header {
+/* .modal_header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -161,4 +161,4 @@ form .buttons button{
         top: 0;
         opacity: 1;
     }
-}
+} */
