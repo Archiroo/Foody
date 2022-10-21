@@ -13,20 +13,31 @@ include('header.php');
                 <h2>Model Thêm</h2>
                 <i class="fas fa-times"></i>
             </div>
-            <form action="#" style="min-height: 200px;">
+            <form action="#" method="POST" style="min-height: 200px;">
+                <!-- Insert Or Update -->
+                <?php
+                    if (isset($_POST['submit'])) {
+                        $typeName = $_POST['typeName'];
+                        $sqlInsert = "INSERT INTO tbl_type_product(name, status) VALUES('$typeName', 1)";
+                        $resInsert = mysqli_query($connect, $sqlInsert);
+                        if ($resInsert == true) {
+                            header("Location:index.php");
+                        } else {
+                            echo $sqlInsert;
+                        }
+
+                    }
+                ?>
                 <div class="form first">
                     <div class="details personal">
                         <div class="fields">
                             <div class="input-field" style="width: 100%;">
                                 <label>Tên loại sản phẩm</label>
-                                <input type="text" placeholder="Nhập tên" required>
+                                <input type="text" name="typeName" placeholder="Nhập tên" required>
                             </div>
                         </div>
                         <div class="buttons">
-                            <button class="nextBtn btn--success" onclick="showSuccessToast()">
-                                <span class="btnNext">Lưu</span>
-                                <i class="uil uil-navigator"></i>
-                            </button>
+                            <input type="submit" name="submit" class="nextBtn btn--success" value="Lưu"></input>
                         </div>
                     </div>
                 </div>
@@ -52,7 +63,7 @@ include('header.php');
                         </thead>
                         <tbody>
                             <?php
-                            $sql = "SELECT * FROM tbl_type_product entity WHERE entity.status = 1 ORDER BY entity.dateCreate DESC";
+                            $sql = "SELECT * FROM tbl_type_product entity WHERE entity.status = 1";
                             $result = mysqli_query($connect, $sql);
                             $number = 0;
                             if ($result == TRUE) {
