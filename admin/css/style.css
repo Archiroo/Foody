@@ -769,4 +769,9 @@ form .buttons button{
     color: rgba(0, 0, 0, 0.3);
     cursor: pointer;
   }
+
+  .table-overflow {
+    max-height: 550px !important;
+    overflow: auto !important;
+}
   

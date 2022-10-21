@@ -162,3 +162,8 @@ form .buttons button{
         opacity: 1;
     }
 } */
+
+.table-overflow {
+    max-height: 550px !important;
+    overflow: auto !important;
+}

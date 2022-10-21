@@ -21,7 +21,7 @@ include('header.php');
                         $sqlInsert = "INSERT INTO tbl_type_product(name, status) VALUES('$typeName', 1)";
                         $resInsert = mysqli_query($connect, $sqlInsert);
                         if ($resInsert == true) {
-                            header("Location:index.php");
+                            echo "Thành công";
                         } else {
                             echo $sqlInsert;
                         }
@@ -48,7 +48,7 @@ include('header.php');
         <div class="activity-grid">
             <div class="activity-card">
                 <h3>Danh sách loại sản phẩm</h3>
-                <div class="table-responsive">
+                <div class="table-responsive table-overflow" style="max-height: 550px; overflow: auto;">
                     <table>
                         <thead>
                             <tr>

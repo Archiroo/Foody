@@ -31,7 +31,7 @@ if (!isset($_SESSION['id_admin'])) {
             <label for="sidebar-toggle" class="ti-menu-alt"></label>
         </div>
         <div class="sidebar-menu">
-            <ul>
+            <ul style="padding: 0;">
                 <li>
                     <a href="index.php">
                         <span class="fas fa-home"></span>
@@ -67,23 +67,21 @@ if (!isset($_SESSION['id_admin'])) {
                                 <a data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
                                     aria-controls="collapseOne">
                                     <span class="fa-solid fa-spa"></span>
-                                    <span>Sản phẩm<i class="fa-solid fa-sort-down flex-right" style="margin-left: 50px;"></i></span>
+                                    <span>Sản phẩm ▼</span>
                                     
                                 </a>
                             </h5>
                         </div>
                         <ul id="collapseOne" class="collapse" aria-labelledby="headingOne"
                             data-parent="#accordionExample">
-                            <li>
+                            <li style="padding: 10px 0px 0px 0px;">
                                 <a href="typeProduct.php">
-                                    <i class="fa-regular fa-circle-stop"></i>
-                                    <span>Quản lý loại sản phẩm</span>
+                                    <p>> QL loại sản phẩm</p>
                                 </a>
                             </li>
-                            <li>
+                            <li style="padding: 0;">
                                 <a href="typeProduct.php">
-                                    <i class="fa-regular fa-circle-stop"></i>
-                                    <span>Quản lý sản phẩm</span>
+                                    <p>> QL sản phẩm</p>
                                 </a>
                             </li>
                         </ul>
